@@ -30,7 +30,7 @@ test("there is a button that toggles the locked state", () => {
   expect(toggleLocked).toBeCalled();
 });
 
-test("the closed button is disabled if the gate is locked", () => {
+test("the closed button disabled if the gate is locked", () => {
   const { getByText } = render(<Controls locked={true} closed={true} />);
   const openGate = getByText(/open gate/i);
   expect(openGate.disabled).toBe(true);
